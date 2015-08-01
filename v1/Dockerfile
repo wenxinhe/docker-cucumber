@@ -2,12 +2,10 @@
 #
 # VERSION               0.0.2
 
-FROM vincent/ubuntu:v3
+FROM wenxinhe/ubuntu:14.04
 
 # utils
-RUN apt-get update && apt-get install -y tree patch make g++ zlib1g-dev
-
-RUN apt-get update && apt-get install -y ruby-full
+RUN apt-get update && apt-get install -y patch make g++ zlib1g-dev ruby-full
 
 RUN gem sources --remove http://rubygems.org/
 RUN gem sources -a http://ruby.taobao.org/
